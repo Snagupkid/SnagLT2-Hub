@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Snag LT2 Shop | Bases & Builds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background: #0a0a0f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #111;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      border-bottom: 2px solid #22c55e;
+    }
+    .section {
+      padding: 20px;
+    }
+    h2 {
+      color: #22c55e;
+      margin-bottom: 10px;
+    }
+    .card {
+      background: #14141a;
+      border: 1px solid #333;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .price {
+      color: #22c55e;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .contact-box {
+      background: #14141a;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      border-top: 2px solid #22c55e;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+  <header>Snag LT2 Shop</header>
+
+  <div class="section">
+    <h2>Available Bases</h2>
+
+    <div class="card">
+      <h3>Starter Clean Plot</h3>
+      <p>Fresh clean base with basic setup.</p>
+      <p class="price">R$ 250</p>
+    </div>
+
+    <div class="card">
+      <h3>Mid‑Game Money Farm</h3>
+      <p>Optimized for fast grinding and cash.</p>
+      <p class="price">R$ 750</p>
+    </div>
+
+    <div class="card">
+      <h3>End‑Game Mansion</h3>
+      <p>Full aesthetic build with interior.</p>
+      <p class="price">R$ 2,000</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <div class="contact-box">
+      <p><strong>Discord:</strong> snagupkid</p>
+      <p><strong>Roblox:</strong> Snagupkid4</p>
+      <p><strong>Payment:</strong> Robux / CashApp / PayPal</p>
+    </div>
+  </div>
+
+  <footer>
+    Snag LT2 Shop • Lumber Tycoon 2 Base Selling Hub
+  </footer>
+</body>
+</html>
