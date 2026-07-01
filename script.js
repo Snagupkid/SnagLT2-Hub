@@ -2,16 +2,65 @@
 const CASHAPP_TAG = "$younginmal";
 const CASHAPP_LINK = "https://cash.app/$younginmal";
 const DISCORD_TAG = "@snagupkid";
-const DISCORD_SERVER = "https://discord.gg/McgA9Ma329";
+const DISCORD_SERVER = "https://discord.gg/VFtxWX5tDg";
 
 // Products
 const products = [
     {
         id: 1,
-        name: "Rengoku Pixel Art",
-        description: "Exclusive Demon Slayer pixel art of Rengoku, the Flame Hashira! Huge design perfect for LT2 collectors and anime fans. High-quality 1080p artwork.",
+        name: "Gon Pixel Art",
+        description: "Hunter x Hunter protagonist Gon in stunning pixel art style. High-quality 1080p artwork.",
         price: "$2.00",
-        image: "https://images.unsplash.com/photo-1579783902614-e3fb5141b0cb?w=500&h=400&fit=crop"
+        image: "https://via.placeholder.com/300x250?text=Gon+Pixel+Art"
+    },
+    {
+        id: 2,
+        name: "Rengoku Pixel Art",
+        description: "Demon Slayer Flame Hashira Rengoku in epic pixel art design. High-quality 1080p artwork.",
+        price: "$2.00",
+        image: "https://via.placeholder.com/300x250?text=Rengoku+Pixel+Art"
+    },
+    {
+        id: 3,
+        name: "Lucario Pixel Art",
+        description: "Pokemon Lucario legendary pixel art style. High-quality 1080p artwork.",
+        price: "$2.00",
+        image: "https://via.placeholder.com/300x250?text=Lucario+Pixel+Art"
+    },
+    {
+        id: 4,
+        name: "Franky Pixel Art",
+        description: "One Piece cyborg Franky in awesome pixel art design. High-quality 1080p artwork.",
+        price: "$2.00",
+        image: "https://via.placeholder.com/300x250?text=Franky+Pixel+Art"
+    },
+    {
+        id: 5,
+        name: "Yami Pixel Art",
+        description: "Black Clover anti-magic Dark Lord Yami in stunning pixel art style. High-quality 1080p artwork.",
+        price: "$2.00",
+        image: "https://via.placeholder.com/300x250?text=Yami+Pixel+Art"
+    },
+    {
+        id: 6,
+        name: "Meg Pixel Art",
+        description: "Exclusive Meg character pixel art design. High-quality 1080p artwork.",
+        price: "$2.00",
+        image: "https://via.placeholder.com/300x250?text=Meg+Pixel+Art"
+    },
+    {
+        id: 7,
+        name: "Nishinoya Pixel Art",
+        description: "Haikyuu volleyball legend Nishinoya in epic pixel art style. High-quality 1080p artwork.",
+        price: "$2.00",
+        image: "https://via.placeholder.com/300x250?text=Nishinoya+Pixel+Art"
+    },
+    {
+        id: 8,
+        name: "XXXTentacion Pixel Art",
+        description: "XXXTentacion tribute pixel art design. High-quality 1080p artwork.",
+        price: "$2.00",
+        image: "https://via.placeholder.com/300x250?text=XXXTentacion+Pixel+Art"
     }
 ];
 
@@ -58,7 +107,7 @@ function buyNow(productName, price) {
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 💬 Discord: ${DISCORD_TAG}
-🔗 Server: discord.gg/McgA9Ma329
+🔗 Server: discord.gg/VFtxWX5tDg
 💰 Cash App: ${CASHAPP_TAG}
 🪚 Lumber grind never stops!
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -83,4 +132,4 @@ function addProduct(name, description, price, imageUrl) {
 // Console easter egg
 console.log('%c⚙️ SNAGS LT2 HUB ⚙️', 'font-size: 20px; color: #00d4ff; text-shadow: 0 0 10px #00d4ff; font-weight: bold;');
 console.log('%cGrind. Build. Flex. 🪚', 'font-size: 16px; color: #00ff88; text-shadow: 0 0 10px #00ff88;');
-console.log('Join the community: https://discord.gg/McgA9Ma329');
+console.log('Join the community: https://discord.gg/VFtxWX5tDg');
