@@ -2,7 +2,7 @@
 const CASHAPP_TAG = "$younginmal";
 const CASHAPP_LINK = "https://cash.app/$younginmal";
 const DISCORD_TAG = "@snagupkid";
-const DISCORD_SERVER = "https://discord.gg/VFtxWX5tDg";
+const DISCORD_SERVER = "https://discord.gg/vQ3g4UzedK";
 
 // Products
 const products = [
@@ -64,8 +64,14 @@ const products = [
     }
 ];
 
-// Load products on page load
-document.addEventListener('DOMContentLoaded', loadProducts);
+let currentRating = 0;
+
+// Load products and reviews on page load
+document.addEventListener('DOMContentLoaded', function() {
+    loadProducts();
+    loadReviews();
+    setupStarRating();
+});
 
 function loadProducts() {
     const grid = document.getElementById('productGrid');
@@ -107,7 +113,7 @@ function buyNow(productName, price) {
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 💬 Discord: ${DISCORD_TAG}
-🔗 Server: discord.gg/VFtxWX5tDg
+🔗 Server: discord.gg/vQ3g4UzedK
 💰 Cash App: ${CASHAPP_TAG}
 🪚 Lumber grind never stops!
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -115,6 +121,114 @@ function buyNow(productName, price) {
 ✅ Trusted | ⚡ Fast | 🎮 LT2 Community`;
     
     alert(message);
+}
+
+function setupStarRating() {
+    const stars = document.querySelectorAll('.star');
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            currentRating = this.dataset.rating;
+            updateStarDisplay();
+        });
+        star.addEventListener('mouseover', function() {
+            const rating = this.dataset.rating;
+            stars.forEach(s => {
+                if (s.dataset.rating <= rating) {
+                    s.style.opacity = '1';
+                } else {
+                    s.style.opacity = '0.5';
+                }
+            });
+        });
+    });
+    document.querySelector('.star-rating').addEventListener('mouseout', updateStarDisplay);
+}
+
+function updateStarDisplay() {
+    const stars = document.querySelectorAll('.star');
+    const display = document.getElementById('ratingDisplay');
+    stars.forEach(star => {
+        if (star.dataset.rating <= currentRating) {
+            star.classList.add('active');
+            star.style.opacity = '1';
+        } else {
+            star.classList.remove('active');
+            star.style.opacity = '0.5';
+        }
+    });
+    if (currentRating > 0) {
+        display.textContent = `${currentRating}/5 Stars`;
+    } else {
+        display.textContent = '';
+    }
+}
+
+function submitReview() {
+    const name = document.getElementById('reviewName').value.trim();
+    const comment = document.getElementById('reviewComment').value.trim();
+    
+    if (!name) {
+        alert('Please enter your name! 📝');
+        return;
+    }
+    
+    if (!comment) {
+        alert('Please write a comment! 💬');
+        return;
+    }
+    
+    if (currentRating === 0) {
+        alert('Please select a rating! ⭐');
+        return;
+    }
+    
+    const review = {
+        name: name,
+        comment: comment,
+        rating: currentRating,
+        date: new Date().toLocaleDateString()
+    };
+    
+    let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    reviews.unshift(review);
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+    
+    // Clear form
+    document.getElementById('reviewName').value = '';
+    document.getElementById('reviewComment').value = '';
+    currentRating = 0;
+    updateStarDisplay();
+    
+    // Reload reviews
+    loadReviews();
+    
+    alert('🎉 Review posted! Thanks for supporting Snags LT2 Hub!');
+}
+
+function loadReviews() {
+    const reviewsList = document.getElementById('reviewsList');
+    let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    
+    reviewsList.innerHTML = '';
+    
+    if (reviews.length === 0) {
+        reviewsList.innerHTML = '<div class="empty-reviews">Be the first to leave a review! 🚀</div>';
+        return;
+    }
+    
+    reviews.forEach(review => {
+        const stars = '⭐'.repeat(review.rating);
+        const reviewCard = document.createElement('div');
+        reviewCard.className = 'review-card';
+        reviewCard.innerHTML = `
+            <div class="review-header">
+                <span class="review-name">${review.name}</span>
+                <span class="review-stars">${stars}</span>
+            </div>
+            <p class="review-text">"${review.comment}"</p>
+        `;
+        reviewsList.appendChild(reviewCard);
+    });
 }
 
 // Add product function for future updates
@@ -132,4 +246,4 @@ function addProduct(name, description, price, imageUrl) {
 // Console easter egg
 console.log('%c⚙️ SNAGS LT2 HUB ⚙️', 'font-size: 20px; color: #00d4ff; text-shadow: 0 0 10px #00d4ff; font-weight: bold;');
 console.log('%cGrind. Build. Flex. 🪚', 'font-size: 16px; color: #00ff88; text-shadow: 0 0 10px #00ff88;');
-console.log('Join the community: https://discord.gg/VFtxWX5tDg');
+console.log('Join the community: https://discord.gg/vQ3g4UzedK');

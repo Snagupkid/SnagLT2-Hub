@@ -22,6 +22,7 @@
             <div class="nav-links">
                 <a href="#products" class="nav-link">🛒 Shop</a>
                 <a href="#how" class="nav-link">📖 How It Works</a>
+                <a href="#reviews" class="nav-link">⭐ Reviews</a>
                 <a href="#contact" class="nav-link">💬 Contact</a>
             </div>
         </div>
@@ -108,6 +109,34 @@
         </div>
     </section>
 
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">⭐ REVIEWS & RATINGS</h2>
+            <p class="section-subtitle">What the community thinks!</p>
+            
+            <div class="review-form-box">
+                <h3 class="review-form-title">Leave Your Review 💬</h3>
+                <div class="review-form">
+                    <input type="text" id="reviewName" placeholder="Your name" class="review-input" maxlength="30">
+                    <textarea id="reviewComment" placeholder="Share your experience with Snags LT2 Hub..." class="review-textarea" maxlength="500"></textarea>
+                    <div class="star-rating">
+                        <span class="star" data-rating="1">⭐</span>
+                        <span class="star" data-rating="2">⭐</span>
+                        <span class="star" data-rating="3">⭐</span>
+                        <span class="star" data-rating="4">⭐</span>
+                        <span class="star" data-rating="5">⭐</span>
+                        <span id="ratingDisplay"></span>
+                    </div>
+                    <button class="review-submit" onclick="submitReview()">POST REVIEW</button>
+                </div>
+            </div>
+
+            <div class="reviews-list" id="reviewsList">
+                <!-- Reviews load here -->
+            </div>
+        </div>
+    </section>
+
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">💬 QUESTIONS?</h2>
@@ -117,7 +146,7 @@
                     <div class="contact-item">
                         <span class="contact-icon">🎮</span>
                         <p><strong>Discord:</strong> @snagupkid</p>
-                        <a href="https://discord.gg/VFtxWX5tDg" target="_blank" class="contact-link">Join Server</a>
+                        <a href="https://discord.gg/vQ3g4UzedK" target="_blank" class="contact-link">Join Server</a>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">💰</span>
