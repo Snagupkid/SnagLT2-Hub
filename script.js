@@ -1,3 +1,8 @@
+// Payment information
+const CASHAPP_TAG = "$younginmal";
+const CASHAPP_LINK = "https://cash.app/$younginmal";
+const DISCORD_TAG = "@snagupkid";
+
 // Product data - UPDATE THIS WITH YOUR PRODUCTS
 const products = [
     {
@@ -49,16 +54,25 @@ function loadProducts() {
 }
 
 function buyNow(productName, price) {
+    const paymentLink = `<a href="${CASHAPP_LINK}" target="_blank" style="color: #0066cc; text-decoration: underline;">📱 Pay via Cash App (${CASHAPP_TAG})</a>`;
+    
     alert(`
 🎉 ${productName} - ${price}
 
-📱 PAYMENT INSTRUCTIONS:
-1. Send ${price} via Cash App
-2. DM @snagupkid on Discord with proof of payment
-3. You'll receive your account info within minutes!
+💵 PAYMENT INSTRUCTIONS:
+1. Pay ${price} to ${CASHAPP_TAG}
+   Cash App Link: ${CASHAPP_LINK}
 
-💬 Discord: @snagupkid
-📲 Have questions? Just DM us!
+2. DM ${DISCORD_TAG} on Discord with:
+   - Your proof of payment
+   - Which account you bought
+
+3. Get your account info instantly! ⚡
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+💬 Discord: ${DISCORD_TAG}
+💰 Cash App: ${CASHAPP_TAG}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     `);
 }
 
